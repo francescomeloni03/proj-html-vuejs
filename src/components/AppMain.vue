@@ -3,7 +3,7 @@ import { store } from '../store'
 
 export default {
     name: "AppMain",
-    props: ["cards1", "cards2", "cards3"],
+    props: ["cards1", "cards2", "cards3", "ForumSections"],
     data() {
         return {
             store
@@ -18,7 +18,7 @@ export default {
             <div class="container-flex">
                 <h1>Tech Forum!</h1>
                 <p>Discuss all the latest technology news and trends</p>
-                <button><strong>GET AVADA NOW!</strong></button>
+                <button><strong>GET AVADA NOW! <font-awesome-icon icon="fa-solid fa-angle-right" /></strong></button>
             </div>
         </div>
 
@@ -31,7 +31,7 @@ export default {
         </div>
 
         <div class="container-3">
-            <h5 id="title">PHASELLUS EGET METUS</h5>
+            <h5 class="title1">PHASELLUS EGET METUS</h5>
             <h1>All the latest news</h1>
             <hr>
             <div class="container-flex-2">
@@ -52,7 +52,7 @@ export default {
                         venenatis,
                         sed blandit due, dolor at bibendum sadips ets ipsums dolores ficilis uns leo lectus
                     </small></p>
-                <button><strong>READ MORE</strong></button>
+                <button><strong>READ MORE <font-awesome-icon icon="fa-solid fa-angle-right" /> </strong></button>
             </div>
         </div>
 
@@ -77,7 +77,7 @@ export default {
                     <p><small> In quis lectus sed leo elementum faucibus in dapibus dictum. Nullamolestie tortor nec lectus
                             venenatis,sed blandit due, dolor at bibendum
                         </small></p>
-                    <button><strong>READ MORE</strong></button>
+                    <button><strong>READ MORE <font-awesome-icon icon="fa-solid fa-angle-right" /></strong></button>
                 </div>
             </div>
             <div class="box-right">
@@ -86,35 +86,53 @@ export default {
                 <div class="container-flex-3">
                     <div class="box-card-2" v-for="card in cards3">
                         <div class="box-card-2-img">
-                        <img :src="card.image" alt="">
-                    </div>
-                    <div class="box-card-2-info">
-                        <h5>{{ card.title }}</h5>
-                        <h6>{{ card.date }} | Comments {{ card.comments }}</h6>
+                            <img :src="card.image" alt="">
+                        </div>
+                        <div class="box-card-2-info">
+                            <h5>{{ card.title }}</h5>
+                            <h6>{{ card.date }} | Comments {{ card.comments }}</h6>
+                        </div>
                     </div>
                 </div>
-
-
-
-
-
-
-                    <!-- <div class="box-card-2" v-for="card in cards3">
-                                                                                                                                                                                                                        <div class="box-card-2-img">
-                                                                                                                                                                                                                            <img :src="card.image" alt="">
-                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                        <div class="box-card-info">
-                                                                                                                                                                                                                            <h5>{{ card.title }}</h5>
-                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                    </div> -->
-
-
-
-
-                </div>
-
             </div>
         </div>
+
+
+
+        <div class="container-6-black">
+            <h5>READ OUR BLOG <font-awesome-icon icon="fa-solid fa-arrow-right" /></h5>
+        </div>
+
+
+        <div class="container-7">
+            <h5 class="title2">PHASELLUS EGET METUS</h5>
+            <h1>Forum Sections</h1>
+            <hr>
+
+            <div class="container-flex-4">
+                <div class="box-forum" v-for="ForumSection in ForumSections">
+                    <div class="icon"><font-awesome-icon :icon="ForumSection.font" class="font" /></div>
+                    <h5>{{ ForumSection.title }}</h5>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-6-black">
+            <h5>GO TO OUR FORUM <font-awesome-icon icon="fa-solid fa-arrow-right" /></h5>
+        </div>
+
+
+        <div class="container-8">
+            <h1>Hey! Join to our <br> Community</h1>
+            <h5>Nulla molestie tortor nec lectus venenatis, sed blandit, Curabitur feugiat <br> vulputate purus
+                ipsumsdoloresficilis uns etra</h5>
+            <button><strong>SIGN UP <font-awesome-icon icon="fa-solid fa-arrow-right" /></strong></button>
+
+        </div>
+
+
+
 
 
 
@@ -196,7 +214,7 @@ export default {
     width: 70%;
     margin: auto;
 
-    #title {
+    .title1 {
         text-align: center;
         margin-top: 40px;
         margin-bottom: 20px;
@@ -283,6 +301,7 @@ export default {
     margin: auto;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 60px;
 
 }
 
@@ -360,6 +379,131 @@ export default {
         h6 {
             margin-left: 10px;
         }
+    }
+}
+
+//
+
+
+
+// Container-black
+.container-6-black {
+    height: 100px;
+    background-color: #191919;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h5 {
+        color: white;
+    }
+}
+
+//
+
+
+// Container-7
+.container-7 {
+    width: 100%;
+    margin: auto;
+    background-color: #f2f2f2;
+    height: 750px;
+
+
+
+    .title2 {
+        text-align: center;
+        padding-top: 80px;
+        margin-bottom: 20px;
+        color: #191919;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    hr {
+        width: 5%;
+        margin: auto;
+        border: 1px solid #ff8d61;
+        margin-bottom: 50px;
+    }
+
+    .container-flex-4 {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        flex-wrap: wrap;
+
+
+        .box-forum {
+            width: 21%;
+            height: 175px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: white;
+            margin-bottom: 40px;
+            border-top: 2px solid #28afc3;
+
+
+            .icon {
+                width: 50px;
+                height: 50px;
+                background-color: #ff8d61;
+                border-radius: 44px;
+                margin-bottom: 10px;
+            }
+
+            .font {
+                padding-left: 17px;
+                padding-top: 13px;
+                height: 24px;
+                color: white;
+            }
+
+        }
+
+    }
+}
+
+//
+
+// Container8
+.container-8 {
+    height: 400px;
+    background-image: url(../assets/img/join_now_cta_bg.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    h1 {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    h5 {
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 130px;
+        height: 40px;
+        background-color: #28afc3;
+        border: none;
+        color: white;
+        border-radius: 2px;
+        cursor: pointer;
     }
 }
 

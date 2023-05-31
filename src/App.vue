@@ -93,6 +93,41 @@ export default {
                     comments: "Off",
                 }
 
+            ],
+
+            ForumSections: [
+                {
+                    font: "fa-solid fa-file-lines",
+                    title: "News & Community",
+                },
+                {
+                    font: "fa-brands fa-apple",
+                    title: "Apple Forum",
+                },
+                {
+                    font: "fa-brands fa-windows",
+                    title: "Microsoft Forum",
+                },
+                {
+                    font: "fa-brands fa-android",
+                    title: "Android Forum",
+                },
+                {
+                    font: "fa-solid fa-mug-saucer",
+                    title: "General Discussion",
+                },
+                {
+                    font: "fa-solid fa-cubes",
+                    title: "Apps & Software",
+                },
+                {
+                    font: "fa-solid fa-desktop",
+                    title: "Gadgets & stuff",
+                },
+                {
+                    font: "fa-solid fa-wrench",
+                    title: "Tutorials & Guides",
+                },
             ]
 
 
@@ -106,7 +141,7 @@ export default {
 
 <template>
     <AppHeader :link-header="linkHeader" />
-    <AppMain :cards1="cards1" :cards2="cards2" :cards3="cards3" />
+    <AppMain :cards1="cards1" :cards2="cards2" :cards3="cards3" :ForumSections="ForumSections" />
     <AppFooter />
 </template>
 
