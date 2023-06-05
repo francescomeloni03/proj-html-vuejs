@@ -68,7 +68,7 @@ header {
 
 .right-part a {
     text-decoration: none;
-    color: white;
+    color: $color-white;
     padding-right: 20px;
 }
 
@@ -85,9 +85,19 @@ button {
     height: 30px;
     width: 80px;
     border: none;
-    background-color: #191919;
-    color: white;
+    background-color: $color-2;
+    color: $color-white;
     margin-right: 20px;
     cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: black;
+}
+
+button:active {
+    background-color: black;
+    transform: translateY(4px);
 }
 </style>

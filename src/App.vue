@@ -126,9 +126,56 @@ export default {
                 },
                 {
                     font: "fa-solid fa-wrench",
-                    title: "Tutorials & Guides",
+                    title: "Tutorials &",
                 },
-            ]
+            ],
+
+            popularTopics: [
+                {
+                    text: "Nam a dolor volutpat massa auctor semper",
+                },
+                {
+                    text: "Sed eiusmod nunc urna fermentum arcu dapibus fringilla",
+                },
+                {
+                    text: "Cras lacinia tellus id marius finibus lacus molestie",
+                },
+                {
+                    text: "Curabitur a scelerisque ligula",
+                }
+            ],
+
+            recentTopics: [
+                {
+                    text: "Cras lacinia tellus id marius finibus lacus molestie",
+                },
+                {
+                    text: "Proint at ligula sagittis vestibulum nisi vitae",
+                },
+                {
+                    text: "Sed nec metus at est tincindunt elementum ",
+                },
+                {
+                    text: "Nulla egestas nulla eu nulla suscipit molestie",
+                },
+            ],
+
+            latestReplies: [
+                {
+                    text: "Cras lacinia tellus id marius finibus lacus molestie",
+                },
+                {
+                    text: "Cras lacinia tellus id marius finibus lacus molestie",
+                },
+                {
+                    text: "Nulla egestas nulla eu nulla suscipit molestie",
+                },
+                {
+                    text: "Mauris ac nibh quis eros sagittis lacinia a et dui",
+                }
+            ],
+
+
 
 
 
@@ -142,7 +189,7 @@ export default {
 <template>
     <AppHeader :link-header="linkHeader" />
     <AppMain :cards1="cards1" :cards2="cards2" :cards3="cards3" :ForumSections="ForumSections" />
-    <AppFooter />
+    <AppFooter :popularTopics="popularTopics" :recentTopics="recentTopics" :latestReplies="latestReplies" />
 </template>
 
 <style></style>

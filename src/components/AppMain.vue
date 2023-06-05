@@ -127,9 +127,9 @@ export default {
             <h1>Hey! Join to our <br> Community</h1>
             <h5>Nulla molestie tortor nec lectus venenatis, sed blandit, Curabitur feugiat <br> vulputate purus
                 ipsumsdoloresficilis uns etra</h5>
-            <button><strong>SIGN UP <font-awesome-icon icon="fa-solid fa-arrow-right" /></strong></button>
-
+            <button><strong>SIGN UP <font-awesome-icon icon="fa-solid fa-angle-right" /></strong></button>
         </div>
+
 
 
 
@@ -151,24 +151,36 @@ export default {
     background-size: cover;
 
     h1 {
-        color: white;
+        color: $color-white;
         font-size: 90px;
     }
 
     p {
-        color: white;
+        color: $color-white;
     }
 
     button {
         width: 200px;
         height: 40px;
-        color: white;
+        color: $color-white;
         background: $color-1;
         border: none;
         border-radius: 3px;
         margin-top: 30px;
         cursor: pointer;
+        transition-duration: 0.4s;
     }
+
+    button:hover {
+        background-color: red;
+        color: white;
+    }
+
+    button:active {
+        background-color: red;
+        transform: translateY(4px);
+    }
+
 }
 
 .container-flex {
@@ -187,7 +199,7 @@ export default {
 // container-2
 .container-2 {
     height: 250px;
-    background-color: #f2f2f2;
+    background-color: $color-4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,12 +207,12 @@ export default {
 
 
     h5 {
-        color: #191919;
+        color: $color-2;
         padding-bottom: 20px;
     }
 
     p {
-        color: #707070;
+        color: $color-5;
         font-family: 'monospace';
         text-align: center;
     }
@@ -218,7 +230,7 @@ export default {
         text-align: center;
         margin-top: 40px;
         margin-bottom: 20px;
-        color: #191919;
+        color: $color-2;
     }
 
     h1 {
@@ -229,7 +241,7 @@ export default {
     hr {
         width: 10%;
         margin: auto;
-        border: 1px solid #ff8d61;
+        border: 1px solid $color-3;
     }
 }
 
@@ -244,12 +256,12 @@ export default {
     height: 300px;
 
     h6 {
-        color: #707070;
+        color: $color-5;
         margin-top: 5px;
     }
 
     p {
-        color: #707070;
+        color: $color-5;
         font-size: small;
         margin-top: 5px;
     }
@@ -274,7 +286,7 @@ export default {
     h4,
     h1,
     p {
-        color: white;
+        color: $color-white;
         margin-bottom: 20px;
     }
 
@@ -282,11 +294,22 @@ export default {
     button {
         width: 150px;
         height: 40px;
-        background-color: #191919;
+        background-color: $color-2;
         border: none;
-        color: white;
+        color: $color-white;
         border-radius: 2px;
         cursor: pointer;
+        transition-duration: 0.4s;
+    }
+
+    button:hover {
+        background-color: black;
+
+    }
+
+    button:active {
+        background-color: black;
+        transform: translateY(4px);
     }
 
 
@@ -317,18 +340,28 @@ export default {
     h4,
     h1,
     p {
-        color: white;
+        color: $color-white;
         margin-bottom: 20px;
     }
 
     button {
         width: 150px;
         height: 40px;
-        background-color: #191919;
+        background-color: $color-2;
         border: none;
-        color: white;
+        color: $color-white;
         border-radius: 2px;
         cursor: pointer;
+        transition-duration: 0.4s;
+    }
+
+    button:hover {
+        background-color: black;
+    }
+
+    button:active {
+        background-color: black;
+        transform: translateY(4px);
     }
 }
 
@@ -338,7 +371,7 @@ export default {
 
     hr {
         width: 30%;
-        border: 1px solid #ff8d61;
+        border: 1px solid $color-3;
         margin-top: 20px;
         margin-bottom: 30px;
     }
@@ -370,7 +403,7 @@ export default {
         height: 90px;
 
         h6 {
-            color: #707070;
+            color: $color-5;
             margin-top: 5px;
             font-size: x-small;
         }
@@ -389,13 +422,13 @@ export default {
 // Container-black
 .container-6-black {
     height: 100px;
-    background-color: #191919;
+    background-color: $color-2;
     display: flex;
     justify-content: center;
     align-items: center;
 
     h5 {
-        color: white;
+        color: $color-white;
     }
 }
 
@@ -406,7 +439,7 @@ export default {
 .container-7 {
     width: 100%;
     margin: auto;
-    background-color: #f2f2f2;
+    background-color: $color-4;
     height: 750px;
 
 
@@ -415,7 +448,7 @@ export default {
         text-align: center;
         padding-top: 80px;
         margin-bottom: 20px;
-        color: #191919;
+        color: $color-2;
     }
 
     h1 {
@@ -426,7 +459,7 @@ export default {
     hr {
         width: 5%;
         margin: auto;
-        border: 1px solid #ff8d61;
+        border: 1px solid $color-3;
         margin-bottom: 50px;
     }
 
@@ -445,7 +478,7 @@ export default {
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            background-color: white;
+            background-color: $color-white;
             margin-bottom: 40px;
             border-top: 2px solid #28afc3;
 
@@ -453,7 +486,7 @@ export default {
             .icon {
                 width: 50px;
                 height: 50px;
-                background-color: #ff8d61;
+                background-color: $color-3;
                 border-radius: 44px;
                 margin-bottom: 10px;
             }
@@ -462,7 +495,7 @@ export default {
                 padding-left: 17px;
                 padding-top: 13px;
                 height: 24px;
-                color: white;
+                color: $color-white;
             }
 
         }
@@ -487,11 +520,11 @@ export default {
         font-size: 50px;
         text-align: center;
         margin-bottom: 20px;
-        color: white;
+        color: $color-white;
     }
 
     h5 {
-        color: white;
+        color: $color-white;
         text-align: center;
         margin-bottom: 20px;
     }
@@ -499,11 +532,21 @@ export default {
     button {
         width: 130px;
         height: 40px;
-        background-color: #28afc3;
+        background-color: $color-1;
         border: none;
-        color: white;
+        color: $color-white;
         border-radius: 2px;
         cursor: pointer;
+        transition-duration: 0.4s;
+    }
+
+    button:hover {
+        background-color: red;
+    }
+
+    button:active {
+        background-color: red;
+        transform: translateY(4px);
     }
 }
 
